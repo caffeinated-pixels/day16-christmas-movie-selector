@@ -9,46 +9,55 @@ const moviesArr = [
     name: 'Die Hard',
     age: '18+',
     genre: 'Action',
+    imdbUrl: 'https://www.imdb.com/title/tt0095016',
   },
   {
     name: 'Bad Santa',
     age: '18+',
     genre: 'Comedy',
+    imdbUrl: 'https://www.imdb.com/title/tt0307987',
   },
   {
     name: 'Scrooged',
     age: 'PG',
     genre: 'Comedy',
+    imdbUrl: 'https://www.imdb.com/title/tt0096061',
   },
   {
     name: 'Merry Christmas Mr. Lawrence',
     age: '15',
     genre: 'War',
+    imdbUrl: 'https://www.imdb.com/title/tt0085933',
   },
   {
     name: 'Raiders of the Lost Ark',
     age: 'PG',
     genre: 'Action',
+    imdbUrl: 'https://www.imdb.com/title/tt0082971/',
   },
   {
     name: "National Lampoon's Christmas Vacation",
     age: 'PG',
     genre: 'Comedy',
+    imdbUrl: 'https://www.imdb.com/title/tt0097958',
   },
   {
     name: "It's a Wonderful Life",
     age: 'U',
     genre: 'Drama',
+    imdbUrl: 'https://www.imdb.com/title/tt0038650',
   },
   {
     name: "On Her Majesty's Secret Service",
     age: 'PG',
     genre: 'Romance',
+    imdbUrl: 'https://www.imdb.com/title/tt0064757',
   },
   {
     name: "Yogi's First Christmas",
     age: 'U',
     genre: 'Family',
+    imdbUrl: 'https://www.imdb.com/title/tt0199161',
   },
 ]
 
