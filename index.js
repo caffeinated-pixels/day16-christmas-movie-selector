@@ -4,6 +4,9 @@ const genreSelector = document.getElementById('genre-selector')
 const btn = document.getElementById('btn')
 const suggestedMovie = document.getElementById('suggested-movie')
 
+ageSelector.addEventListener('change', recommendMovie)
+genreSelector.addEventListener('change', recommendMovie)
+
 const moviesArr = [
   {
     name: 'Die Hard',
@@ -43,7 +46,7 @@ const moviesArr = [
   },
   {
     name: "It's a Wonderful Life",
-    age: 'U',
+    age: 'PG',
     genre: 'Drama',
     imdbUrl: 'https://www.imdb.com/title/tt0038650',
   },
@@ -55,11 +58,45 @@ const moviesArr = [
   },
   {
     name: "Yogi's First Christmas",
-    age: 'U',
+    age: 'PG',
     genre: 'Family',
     imdbUrl: 'https://www.imdb.com/title/tt0199161',
   },
 ]
+
+function recommendMovie(e) {
+  //   console.log(e.target.value)
+  console.log(ageSelector.value, genreSelector.value)
+
+  if (ageSelector.value && genreSelector.value) {
+    console.log('both true')
+    const filteredMovies = filterMovies(ageSelector.value, genreSelector.value)
+    console.log(filteredMovies)
+    const choosenMovie = chooseFromFilteredMovies(filteredMovies)
+    console.log(choosenMovie.name)
+  }
+}
+
+function filterMovies(age, genre) {
+  return moviesArr.filter((movie) => movie.age === age && movie.genre === genre)
+}
+
+function chooseFromFilteredMovies(movies) {
+  const numOfMovies = movies.length
+  console.log('movies num = ' + numOfMovies)
+
+  if (numOfMovies > 1) {
+    const randomIndex = Math.floor(Math.random() * numOfMovies)
+    console.log('index = ' + randomIndex)
+    return movies[randomIndex]
+  }
+
+  if (numOfMovies === 0) {
+    return { name: 'no suitable movie', imbdUrl: '' }
+  }
+
+  return movies[0]
+}
 
 // Task:
 // - Write a function to select a suitable movie based on the age group and genre provided.
