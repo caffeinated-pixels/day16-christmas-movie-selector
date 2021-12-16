@@ -1,11 +1,15 @@
 const ageSelector = document.getElementById('age-selector')
 const genreSelector = document.getElementById('genre-selector')
 
-const btn = document.getElementById('btn')
+const randomChoiceBtn = document.getElementById('random-choice')
 const suggestedMovie = document.getElementById('suggested-movie')
 
 ageSelector.addEventListener('change', recommendMovie)
 genreSelector.addEventListener('change', recommendMovie)
+
+randomChoiceBtn.addEventListener('click', getRandomMovie)
+
+let currentMovie = ''
 
 const moviesArr = [
   {
@@ -106,8 +110,21 @@ function displayMovie(movie) {
 
     suggestedMovie.textContent = ''
     suggestedMovie.appendChild(movieLink)
+    currentMovie = movie.name
   } else {
     suggestedMovie.textContent = movie.name
+    currentMovie = ''
+  }
+}
+
+function getRandomMovie() {
+  const numOfMovies = moviesArr.length
+  const randomIndex = Math.floor(Math.random() * numOfMovies)
+
+  if (moviesArr[randomIndex].name === currentMovie) {
+    getRandomMovie()
+  } else {
+    displayMovie(moviesArr[randomIndex])
   }
 }
 
