@@ -10,57 +10,63 @@ genreSelector.addEventListener('change', recommendMovie)
 const moviesArr = [
   {
     name: 'Die Hard',
-    age: '18+',
+    age: 'grown ups',
     genre: 'Action',
     imdbUrl: 'https://www.imdb.com/title/tt0095016',
   },
   {
     name: 'Bad Santa',
-    age: '18+',
+    age: 'grown ups',
     genre: 'Comedy',
     imdbUrl: 'https://www.imdb.com/title/tt0307987',
   },
   {
     name: 'Scrooged',
-    age: 'PG',
+    age: 'everyone',
     genre: 'Comedy',
     imdbUrl: 'https://www.imdb.com/title/tt0096061',
   },
   {
     name: 'Merry Christmas Mr. Lawrence',
-    age: '15',
+    age: 'grown ups',
     genre: 'War',
     imdbUrl: 'https://www.imdb.com/title/tt0085933',
   },
   {
     name: 'Raiders of the Lost Ark',
-    age: 'PG',
+    age: 'everyone',
     genre: 'Action',
     imdbUrl: 'https://www.imdb.com/title/tt0082971/',
   },
   {
     name: "National Lampoon's Christmas Vacation",
-    age: 'PG',
+    age: 'everyone',
     genre: 'Comedy',
     imdbUrl: 'https://www.imdb.com/title/tt0097958',
   },
   {
     name: "It's a Wonderful Life",
-    age: 'PG',
+    age: 'everyone',
     genre: 'Drama',
     imdbUrl: 'https://www.imdb.com/title/tt0038650',
   },
   {
     name: "On Her Majesty's Secret Service",
-    age: 'PG',
+    age: 'everyone',
     genre: 'Romance',
     imdbUrl: 'https://www.imdb.com/title/tt0064757',
   },
   {
     name: "Yogi's First Christmas",
-    age: 'PG',
+    age: 'everyone',
     genre: 'Family',
     imdbUrl: 'https://www.imdb.com/title/tt0199161',
+  },
+  {
+    name: 'The Happiness of the Katakuris',
+    age: 'grown ups',
+    genre: 'Family',
+    imdbUrl: 'https://www.imdb.com/title/tt0304262/',
   },
 ]
 
@@ -85,7 +91,7 @@ function chooseFromFilteredMovies(movies) {
   }
 
   if (numOfMovies === 0) {
-    return { name: 'no suitable movie' }
+    return { name: 'no movie found, you could play Monopoly?' }
   }
 
   return movies[0]
