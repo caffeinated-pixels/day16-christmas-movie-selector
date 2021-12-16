@@ -85,19 +85,23 @@ function chooseFromFilteredMovies(movies) {
   }
 
   if (numOfMovies === 0) {
-    return { name: 'no suitable movie', imbdUrl: '' }
+    return { name: 'no suitable movie' }
   }
 
   return movies[0]
 }
 
 function displayMovie(movie) {
-  const movieLink = document.createElement('a')
-  movieLink.textContent = movie.name
-  movieLink.href = movie.imdbUrl
+  if (movie.imdbUrl) {
+    const movieLink = document.createElement('a')
+    movieLink.textContent = movie.name
+    movieLink.href = movie.imdbUrl
 
-  suggestedMovie.textContent = ''
-  suggestedMovie.appendChild(movieLink)
+    suggestedMovie.textContent = ''
+    suggestedMovie.appendChild(movieLink)
+  } else {
+    suggestedMovie.textContent = movie.name
+  }
 }
 
 // Task:
