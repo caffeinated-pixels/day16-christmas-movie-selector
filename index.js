@@ -65,13 +65,8 @@ const moviesArr = [
 ]
 
 function recommendMovie(e) {
-  //   console.log(e.target.value)
-  console.log(ageSelector.value, genreSelector.value)
-
   if (ageSelector.value && genreSelector.value) {
-    console.log('both true')
     const filteredMovies = filterMovies(ageSelector.value, genreSelector.value)
-    console.log(filteredMovies)
     const choosenMovie = chooseFromFilteredMovies(filteredMovies)
     displayMovie(choosenMovie)
   }
@@ -83,11 +78,9 @@ function filterMovies(age, genre) {
 
 function chooseFromFilteredMovies(movies) {
   const numOfMovies = movies.length
-  console.log('movies num = ' + numOfMovies)
 
   if (numOfMovies > 1) {
     const randomIndex = Math.floor(Math.random() * numOfMovies)
-    console.log('index = ' + randomIndex)
     return movies[randomIndex]
   }
 
