@@ -72,6 +72,12 @@ const moviesArr = [
     genre: 'Family',
     imdbUrl: 'https://www.imdb.com/title/tt0304262/',
   },
+  {
+    name: 'Hana-Bi',
+    age: 'grown ups',
+    genre: 'Drama',
+    imdbUrl: 'https://www.imdb.com/title/tt0119250/',
+  },
 ]
 
 function recommendMovie(e) {
