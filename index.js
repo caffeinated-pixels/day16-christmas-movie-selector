@@ -83,6 +83,10 @@ function recommendMovie(e) {
 }
 
 function filterMovies(age, genre) {
+  if (age === 'grown ups') {
+    return moviesArr.filter((movie) => movie.genre === genre)
+  }
+
   return moviesArr.filter((movie) => movie.age === age && movie.genre === genre)
 }
 
