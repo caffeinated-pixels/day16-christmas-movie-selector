@@ -73,7 +73,7 @@ function recommendMovie(e) {
     const filteredMovies = filterMovies(ageSelector.value, genreSelector.value)
     console.log(filteredMovies)
     const choosenMovie = chooseFromFilteredMovies(filteredMovies)
-    console.log(choosenMovie.name)
+    displayMovie(choosenMovie)
   }
 }
 
@@ -96,6 +96,15 @@ function chooseFromFilteredMovies(movies) {
   }
 
   return movies[0]
+}
+
+function displayMovie(movie) {
+  const movieLink = document.createElement('a')
+  movieLink.textContent = movie.name
+  movieLink.href = movie.imdbUrl
+
+  suggestedMovie.textContent = ''
+  suggestedMovie.appendChild(movieLink)
 }
 
 // Task:
