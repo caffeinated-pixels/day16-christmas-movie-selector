@@ -96,6 +96,7 @@ function displayMovie(movie) {
     const movieLink = document.createElement('a')
     movieLink.textContent = movie.name
     movieLink.href = movie.imdbUrl
+    movieLink.className = 'imdb-link'
 
     suggestedMovie.textContent = ''
     suggestedMovie.appendChild(movieLink)
