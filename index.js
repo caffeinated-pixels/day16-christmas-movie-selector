@@ -11,19 +11,44 @@ const moviesArr = [
     genre: 'Action',
   },
   {
-    name: 'Love Actually',
+    name: 'Bad Santa',
     age: '18+',
-    genre: 'Romance',
+    genre: 'Comedy',
   },
   {
-    name: 'The Polar Express',
+    name: 'Scrooged',
+    age: 'PG',
+    genre: 'Comedy',
+  },
+  {
+    name: 'Merry Christmas Mr. Lawrence',
+    age: '15',
+    genre: 'War',
+  },
+  {
+    name: 'Raiders of the Lost Ark',
     age: 'PG',
     genre: 'Action',
   },
   {
-    name: 'Shrek',
+    name: "National Lampoon's Christmas Vacation",
+    age: 'PG',
+    genre: 'Comedy',
+  },
+  {
+    name: "It's a Wonderful Life",
+    age: 'U',
+    genre: 'Drama',
+  },
+  {
+    name: "On Her Majesty's Secret Service",
     age: 'PG',
     genre: 'Romance',
+  },
+  {
+    name: "Yogi's First Christmas",
+    age: 'U',
+    genre: 'Family',
   },
 ]
 
