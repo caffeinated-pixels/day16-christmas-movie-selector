@@ -88,3 +88,13 @@ button:hover {
   cursor: pointer;
   transform: scale(1.03);
 }
+
+.imdb-link {
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.15s linear;
+}
+
+.imdb-link:hover {
+  transform: scale(1.05);
+}
